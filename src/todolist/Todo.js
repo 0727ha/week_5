@@ -9,7 +9,7 @@ const Todo = () => {
     const [todo, setTodo] = useState([]) 
 
 	//고유 id값을 받아 해당 item삭제(해당 item을 제외한 값만 필터링)
-    const onDel = (id)=>{
+    const onDel = (id)=>{ 
         setTodo(todo.filter(todo => todo.id !== id))
     }
 	
