@@ -2,18 +2,20 @@ import React, { useRef, useState } from 'react';
 import '../css/Todos.css'
 import TodoForm from './TodoForm';
 import TodoList from './Todolist';
+import './Todolist/App.css';
+
 
 
 const Todo = () => {
     const no = useRef(1) //할 일(item)의 고유 id가 될 숫자
     const [todo, setTodo] = useState([]) 
 
-	//고유 id값을 받아 해당 item삭제(해당 item을 제외한 값만 필터링)
+	
     const onDel = (id)=>{ 
         setTodo(todo.filter(todo => todo.id !== id))
     }
 	
-    //고유 id값을 받아 해당 item의 체크 상태를 설정
+    //고유 id값을 받아 해당 item의 체크 상태를 설정-체크를 누르면 없어지는 걸 하고 싶었는데 안됨.왜지
     const onToggle= (id)=>{
         setTodo(todo.map(item=> item.id ===id? {...item, check : !item.check } : item))
     }

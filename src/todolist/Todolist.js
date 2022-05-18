@@ -1,6 +1,6 @@
 import TodoItem from './TodoItem';
 import '../css/TodoList.css'
-
+import './App.css';
 const TodoList = ({todo, onToggle, onDel})=> {
     
     return (
@@ -12,5 +12,7 @@ const TodoList = ({todo, onToggle, onDel})=> {
     );
     
 }
+
+
 
 export default TodoList;
