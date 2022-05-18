@@ -70,4 +70,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 5주차 개념 과제
--클래스형 컴포넌트 vs  함수형 컴포넌트
+-클래스형 컴포넌트 vs  함수형 컴포넌트 
+react 컴포넌트 선언하는 두가지 방식 중 하나이다.
+클래스형은 먼저 state, lifeCycle 관련 기능사용 가능하다.
+또한 메모리 자원을 함수형 컴포넌트보다 조금 더 사용하며
+임의 메서드를 정의할 수 있다.
+
+함수형 컴포넌트는 state, lifeCycle 관련 기능사용 불가능하다.[Hook을 통해 해결 됨]
+메모리 자원을 함수형 컴포넌트보다 덜 사용한다.
+또한 컴포넌트 선언이 편하다.
+
+-함수형 컴포넌트를 사용하는 이유 (장점)
+ 리랜더링 될 때의 값을 유지한다. 
+ 함수형 컴포넌트는 props에 따른 랜더링 결과를 보장받는다.
+ 매개변수로 받는 props의 destructuring을 활용해 가독성을 보장받을 수 있다.
+ 결국 함수이기에 함수의 모든 장점을 이용할 수 있다. 
+ 함수형 컴포넌트를 사용했을 때 코드가 간결해지고 가독성도 좋다!
+
+ -렌더링이란
+ 렌더링이란 HTML,CSS, 자바스크립트 등 개발자가 작성한 문서가 브라우저에서 출력되는 과정을 말한다.
+
+브라우저 마다 다르지만, 브라우저는 렌더링을 수행하는 렌더링 엔진을 가지고 있습니다. 크롬은 블링크(Blink), 사파리는 웹킷(Webkit) 그리고 파이어폭스는 게코(Gecko)라는 렌더링 엔진을 사용한다.
+-마운팅이란 
+리액트가 최초로 컴포넌트를 렌더링할 때. 앞선 지시사항들로부터 첫 DOM을 실제로 빌드하는 것이다.
+
+-과정
+React가 렌더링을 실행하는 과정
+React 컴포넌트가 렌더링을 수행하는 시점은 다음과 같다.
+
+1)Props가 변경되었을 때
+2)State가 변경되었을 때
+3)forceUpdate() 를 실행하였을 때
+4)부모 컴포넌트가 렌더링되었을 때
