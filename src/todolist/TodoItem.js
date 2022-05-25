@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 const TodoItem = ({item, onToggle, onDel}) => {
     const {id, text, check} = item
 

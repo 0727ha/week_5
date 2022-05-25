@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../css/TodoForm.css'
-import './App.css';
+
 const TodoForm = ({onAdd}) => {
     const textRef = useRef('') //입력후 input에서 사용해주기 위함
     const [text, setText] = useState('') //  입력값 나타냄
@@ -21,8 +21,8 @@ const TodoForm = ({onAdd}) => {
     
     return (
         <form className="TodoForm" onSubmit={onSubmit}>
-        <input type="text" value={text} onChange={changeInput} ref={textRef}/>
-        <button type="submit">Add</button>
+        <input className="text_1" type="text" value={text} onChange={changeInput} ref={textRef}/>
+        <button className="button_1" type="submit">Add</button>
         </form>
 
     );

@@ -1,7 +1,7 @@
 import TodoItem from './TodoItem';
 import '../css/TodoList.css'
-import './App.css';
-const TodoList = ({todo, onToggle, onDel})=> {
+
+const TodoList = ({todo, onToggle, onDel  })=> {
     
     return (
         <ul className="TodoList">
