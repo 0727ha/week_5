@@ -24,6 +24,7 @@ const TodoForm = ({onAdd}) => {
         <input className="text_1" type="text" value={text} onChange={changeInput} ref={textRef}/>
         <button className="button_1" type="submit">Add</button>
         </form>
+        
 
     );
 };

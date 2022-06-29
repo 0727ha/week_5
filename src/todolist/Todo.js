@@ -1,14 +1,18 @@
+import { atom } from "recoil";
 import React, { useRef, useState } from 'react';
 import '../css/Todos.css'
 import TodoForm from './TodoForm';
 import TodoList from './Todolist';
+import {useRecoilState,} from "recoil";
+import { todos } from "../atoms/todos";
 
 
 
 
 const Todo = () => {
+    const [todo, setTodo] = useRecoilState(todos); 
     const no = useRef(1) //할 일(item)의 고유 id가 될 숫자
-    const [todo, setTodo] = useState([]) 
+    
 
 	
     const onDel = (id)=>{ 
@@ -20,7 +24,7 @@ const Todo = () => {
         setTodo(todo.map(item=> item.id ===id? {...item, check : !item.check } : item))
     }
 
-	//form에 입력받은 값을 새로운 doto item으로 추가
+	//form에 입력받은 값을 새로운 todo item으로 추가
     const onAdd = (text)=>{
         setTodo([
             ...todo,
@@ -40,6 +44,7 @@ const Todo = () => {
             <TodoForm onAdd={onAdd}/>
             <TodoList todo={todo} onToggle={onToggle} onDel={onDel}/>  
         </div>
+        
     );
 };
 

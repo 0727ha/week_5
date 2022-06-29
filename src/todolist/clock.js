@@ -12,3 +12,4 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
+//시간도 나타나게 하고 싶은데...
